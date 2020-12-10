@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'blog',
     'blog_api',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -110,3 +111,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# custom settings
+AUTH_USER_MODEL='blog.Author'

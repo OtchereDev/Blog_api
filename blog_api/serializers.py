@@ -1,4 +1,4 @@
-from blog.models import Post
+from blog.models import Post,Category
 from rest_framework import serializers
 
 
@@ -9,6 +9,11 @@ class PostSerializer(serializers.ModelSerializer):
                 'title',
                 'excerpt',
                 'content',
-                'slug',
                 'author',
                 'status',]
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields='__all__'
+
