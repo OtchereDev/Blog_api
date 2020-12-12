@@ -26,8 +26,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # own apps
     'blog',
     'blog_api',
+    'authentication',
+
+    # third party app
     'rest_framework',
     'drf_yasg',
 ]
@@ -115,3 +120,9 @@ STATIC_URL = '/static/'
 
 # custom settings
 AUTH_USER_MODEL='blog.Author'
+
+JWTSECRETEPASSWORD='JWTSECRETEPASSWORDJWTSECRETEPASSWORDJWTSECRETEPASSWORDJWTSECRETEPASSWORD'
+
+REST_FRAMEWORK={
+    'DEFAULT_AUTHENTICATION_CLASSES':('authentication.backend.JWTAuthentication',)
+}
